@@ -48,7 +48,7 @@ public class TextKnowledgeBase implements KnowledgeBase {
     }
 
     @Override
-    public List<String> searchKnowledge(String query) {
+    public List<String> searchKnowledgeAll() {
         try {
             // 从文件读取所有内容               ·
             return Files.readAllLines(getFilePath());

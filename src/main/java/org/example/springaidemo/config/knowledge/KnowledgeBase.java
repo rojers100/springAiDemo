@@ -4,6 +4,6 @@ import java.util.List;
 
 public interface KnowledgeBase {
     void addKnowledge(String content);
-    List<String> searchKnowledge(String query);
+    List<String> searchKnowledgeAll();
     boolean updateKnowledge(String oldContent, String newContent);
 } 

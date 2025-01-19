@@ -28,7 +28,7 @@ public class MychatMemory implements ChatMemory {
 
     @Override
     public void add(String conversationId, List<Message> messages) {
-        this.conversationHistory.computeIfAbsent(conversationId, id -> Collections.synchronizedList(new ArrayList<>()))
+            this.conversationHistory.computeIfAbsent(conversationId, id -> Collections.synchronizedList(new ArrayList<>()))
                 .addAll(messages);
     }
 
@@ -61,7 +61,7 @@ public class MychatMemory implements ChatMemory {
     }
 
     public List<String> searchTextKnowledge(String query) {
-        return textKnowledgeBase.searchKnowledge(query);
+        return textKnowledgeBase.searchKnowledgeAll();
     }
 
     public boolean updateTextKnowledge(String oldContent, String newContent) {
